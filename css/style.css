@@ -27,7 +27,7 @@ body{
     color: #16161A;
     background: var(--color_blue);
     border: 1px solid #5092D2;
-    border-radius: 10px;
+    border-radius: 5px;
     transition: all .3s linear;
 }
 .common_btn:hover{
@@ -46,19 +46,14 @@ ul,li{
 .navbar{
     width: 100%;
     position: fixed;
-    top: 10px;
-    z-index: 99;
-    background: rgba(0, 0, 0, .3);
+    z-index: 1;
+    background: rgba(0, 0, 0, .5);
+    padding: 15px 0;
 }
-.navbar .container{
-    position: relative;
+.navbar .vector_img{
+    width: 30%;
+    margin-left: 30px;
 }
-/* .navbar .container .navbar-brand{
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translateX(-50%);
-} */
 .navbar .navbar-nav .nav-item .nav-link{
     font-family: var(--font_head);
     font-style: normal;
@@ -69,9 +64,6 @@ ul,li{
     transition: all .3s linear;
     padding: 15px 24px;
 }
-.navbar .navbar-nav .nav-item:last-child{
-    margin-right: 70px;
-}
 .navbar .navbar-nav .nav-item .nav-link:hover{
     color: var(--color_blue);
 }
@@ -81,11 +73,8 @@ ul,li{
 .navbar .vector-img{
     width: 300px;
 }
-.navbar .common_btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translateX(50%);
+.navbar .btn:hover{
+    background: #27272E;
 }
 /* ====================navbar css end==================== */
 /* ====================banner-part css start============= */
@@ -94,16 +83,17 @@ ul,li{
     width: 100%;
     background: url(../images/banner.png) no-repeat center;
     background-size: cover;
-    padding-top: 200px;
+    padding-top: 150px;
     overflow: hidden;
+    z-index: 0;
 }
-#banner_part .text h1{
-    width: 650px;
-    font-family: var(--font_head);
-    font-style: normal;
-    font-weight: 700;
-    font-size: 40px;
-    color: #FFFFFF;
+#banner_part .text h1 {
+	width: 650px;
+	font-family: var(--font_head);
+	font-style: normal;
+	font-weight: 700;
+	font-size: 50px;
+	color: #FFFFFF;
 }
 #banner_part .text p{
     width: 450px;
@@ -125,36 +115,34 @@ ul,li{
 }
 #banner_part .banner_hero{
     height: 85%;
+    z-index: -1;
 }
 #banner_part .svg_shadow{
     width: 100%;
     position: absolute;
     bottom: 0;
-    transform: translateY(45%);
+    transform: translateY(55%);
+    z-index: -1;
 }
 #banner_part .iframe{
-    height: 29%;
-    width: 23%;
-    position: absolute;
-    right: 9%;
-    bottom: 10%;
-    border-radius: 5px;
-    border: 1px solid rgba(255, 255, 255, .6);
+    position: relative;
+    border-radius: 7px;
     overflow: hidden;
-    z-index: 9;
+    cursor: pointer;
 }
 #banner_part .iframe_cover{
     background: rgba(0, 0, 0, .4);
     transition: all .2s linear;
+    position: absolute;
 }
 #banner_part .iframe_cover .icon{
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     border: 1px solid #fff;
     text-align: center;
     font-size: 22px;
-    line-height: 43px;
+    line-height: 46px;
     color: #fff;
     position: absolute;
     top: 50%;
@@ -174,15 +162,15 @@ ul,li{
 #hero_part{
     padding: 80px 0;
 }
-#hero_part h2{
-    font-family: var(--font_head);
-    font-style: normal;
-    font-weight: 700;
-    font-size: 48px;
-    line-height: 65px;
-    text-align: center;
-    color: #FFFFFF;
-    margin-bottom: 100px;
+#hero_part h2 {
+	font-family: var(--font_head);
+	font-style: normal;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 65px;
+	text-align: center;
+	color: #FFFFFF;
+	margin-bottom: 170px;
 }
 #hero_part .cards{
     width: 100%;
@@ -222,3 +210,77 @@ ul,li{
     color: #b9dcff;
 }
 /* ====================hero_part css end================= */
+/* ====================sec_banner css start============== */
+#sec_banner .banner2{
+    background: url(../images/principal.png) no-repeat center;
+    background-size: cover;
+    margin: 100px 0 70px;
+    padding: 95px 0;
+}
+#sec_banner .banner2 .text h3{
+    font-family: var(--font_head);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 41px;
+    line-height: 65px;
+    color: #FFFFFF;
+}
+#sec_banner .banner2 .text p{
+    font-family: var(--font_para);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 160%;
+    color: #FFFFFF;
+}
+#sec_banner .banner2 .hov_img{
+    opacity: .7;
+    border: 2px solid transparent;
+    transition: all .2s linear;
+}
+#sec_banner .banner2 .hov_img:hover{
+    opacity: 1;
+    border: 2px solid var(--color_blue);
+}
+/* ====================sec_banner css end================ */
+/* ====================community css start=============== */
+#community {
+    margin: 100px 0 150px;
+}
+#community h4{
+    font-family: var(--font_head);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 65px;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+}
+#community .com_card{
+    padding: 200px 0 50px 50px;
+    background: #27272E;
+    border-radius: 5px;
+}
+#community .com_card h3{
+    width: 300px;
+    font-family: var(--font_head);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 47px;
+    color: #FFFFFF;
+}
+#community .com_card p{
+    width: 290px;
+    font-family: var(--font_para);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 160%;
+    color: #FFFFFF;
+    margin: 10px 0 35px;
+}
+#community .com_card img{
+    height: 95%;
+}
+/* ====================community css end================= */

@@ -22,29 +22,33 @@
     
     <!-- =================custom css link================ -->
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- =================responsive css link============ -->
+    <link rel="stylesheet" href="css/responsive.css">
     
 </head>
 <body>
 
     <!-- =================navbar html==================== -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container position-relative">
-          <a class="navbar-brand position-absolute start-0 translate-middle-x" href="#">
+    <nav id="navbar" class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
             <img src="images/logo.png" alt="logo.png">
           </a>
+          <img class="vector_img" src="images/Vector.png" alt="">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+            <i class="fa-solid fa-bars"></i>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Videos and Screens</a>
+                <a class="nav-link active" aria-current="page" href="#banner_part">Videos and Screens</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Backstage</a>
+                <a class="nav-link" aria-current="page" href="#hero_part">Backstage</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">Community</a>
+                <a class="nav-link" aria-current="page" href="#sec_banner">Community</a>
               </li>
             </ul>
             <button class="btn common_btn" type="submit">Buy now</button>
@@ -56,23 +60,33 @@
     <!-- =================banner html==================== -->
     <section id="banner_part" class="position-relative">
         <div class="container d-flex flex-column">
-          <div class="text">
-            <h1>A darker and more primitive world</h1>
-            <p>From the marble and ornate columns of Olympus to the forests, this is a new realm, with its own species of creatures, monsters and gods.</p>
-          </div>
-          <div class="buttons d-flex">
-            <button class="btn common_btn">Buy Now</button>
-            <button class="btn common_btn ms-3">More Info</button>
-          </div>
-
-          <a class="iframe" href="#">
-            <div class="iframe_cover w-100 h-100 position-absolute">
-              <div class="icon">
-                <i class="fa-solid fa-play"></i>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="text">
+                <h1>A darker and more primitive world</h1>
+                <p>From the marble and ornate columns of Olympus to the forests, this is a new realm, with its own species of creatures, monsters and gods.</p>
+              </div>
+              <div class="buttons d-flex">
+                <button class="btn common_btn">Buy Now</button>
+                <button class="btn common_btn ms-3">More Info</button>
               </div>
             </div>
-            <img class="iframe_img h-100 w-100" src="images/banner_video.jpg" alt="">
-          </a>
+            <div class="col-lg-6"></div>
+          </div>
+
+          <div class="row">
+            <div class="col-lg-8"></div>
+            <div class="col-lg-4">
+              <div class="iframe mt-2">
+                <div class="iframe_cover w-100 h-100">
+                  <div class="icon">
+                    <i class="fa-solid fa-play"></i>
+                  </div>
+                </div>
+                <img class="iframe_img w-100" src="images/banner_video.jpg" alt="">
+              </div>
+            </div>
+          </div>
 
         </div>
         <img class="banner_hero position-absolute bottom-0 end-0" src="images/banner_hero.png" alt="">
@@ -114,6 +128,55 @@
       </div>
     </section>
     <!-- =================hero_part html================= -->
+
+    <!-- =================sec_banner html================ -->
+    <section id="sec_banner">
+      <div class="container">
+        <div class="banner2">
+          <div class="row">
+            <div class="col-lg-3">
+              <img class="hov_img w-100 mb-4 rounded-2" src="images/01.jpg" alt="01.jpg">
+              <img class="hov_img w-100 mb-4 rounded-2" src="images/02.jpg" alt="02.jpg">
+              <img class="hov_img w-100 rounded-2" src="images/03.jpg" alt="03.jpg">
+            </div>
+            <div class="col-lg-5"></div>
+            <div class="col-lg-4 d-flex align-items-center justify-content-end">
+              <div class="text">
+                <h3>Lute in the Nordic Kingdom</h3>
+                <p class="mt-1 mb-3">With a vengeance against the gods of Olympus in a distant past, Kratos now lives as a mortal not reigning over two gods and Nordic monsters.</p>
+                <p>This is a harsh and unforgiving world that you must fight to survive... and teach your child to do it himself.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =================sec_banner html================ -->
+    <!-- =================community html================= -->
+    <section id="community">
+      <div class="container">
+        <h4>Legendary Weapons</h4>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="com_card position-relative">
+              <h3>Refined Rune Power</h3>
+              <p>Novas habilidades permitem que Kratos use seu machado de maneira inéditas</p>
+              <button class="common_btn">Know more</button>
+              <img class="position-absolute end-0 bottom-0" src="images/axe.png" alt="axe.png">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="com_card position-relative">
+              <h3>More than a boy with a bow</h3>
+              <p>Atreus aprimorou suas habilidades de arquearia para desferir novos ataques</p>
+              <button class="common_btn">Know more</button>
+              <img class="position-absolute end-0 bottom-0" src="images/arrow.png" alt="arrow.png">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- =================community html================= -->
 
 
     <!-- =================Bootstrap js link============== -->
